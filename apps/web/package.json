@@ -11,11 +11,11 @@
   "dependencies": {
     "@livekit/components-react": "^2.9.2",
     "@livekit/components-styles": "^1.1.4",
-    "googleapis": "^144.0.0",
+    "googleapis": "^190.0.0",
     "livekit-client": "^2.9.3",
     "livekit-server-sdk": "^2.9.1",
     "lucide-react": "^0.475.0",
-    "next": "15.1.7",
+    "next": "^16.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -29,4 +29,3 @@
     "typescript": "^5.7.3"
   }
 }
-
