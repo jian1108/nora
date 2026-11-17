@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: ori-reception-web
+    runtime: node
+    rootDir: apps/web
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: LIVEKIT_URL
+        sync: false
+      - key: LIVEKIT_API_KEY
+        sync: false
+      - key: LIVEKIT_API_SECRET
+        sync: false
+      - key: LIVEKIT_AGENT_NAME
+        value: nora-receptionist
+      - key: OFFICE_NAME
+        value: Ori Home Improvement
+      - key: OFFICE_TIMEZONE
+        value: America/New_York
+      - key: SMS_PROVIDER
+        value: outbox
+

@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  nora-web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      - nora_data:/app/data
+    restart: unless-stopped
+
+  nora-agent:
+    build:
+      context: ./apps/agent
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      - NORA_WEB_API_URL=http://nora-web:3000
+    depends_on:
+      - nora-web
+    restart: unless-stopped
+
+volumes:
+  nora_data:
+

@@ -1,0 +1,17 @@
+{
+  "name": "nora-after-hours-dispatch",
+  "rule": {
+    "dispatchRuleIndividual": {
+      "roomPrefix": "nora-call-"
+    }
+  },
+  "roomConfig": {
+    "agents": [
+      {
+        "agentName": "nora-receptionist",
+        "metadata": "{\"role\": \"after-hours-receptionist\"}"
+      }
+    ]
+  }
+}
+
